@@ -1,0 +1,396 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap');
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+.header{
+    min-height:30vh;
+    width:100%;
+    background-image:linear-gradient(rgba(4, 30, 6, 0.7),rgba(4,9,30,0.7)),url(https://th.bing.com/th/id/R.69f2173d59729ea1cb31914a90cf8f9d?rik=7tlIVNUcRn9D8A&riu=http%3a%2f%2fww1.prweb.com%2fprfiles%2f2016%2f01%2f30%2f13226857%2fEsperanza_0001x.JPG&ehk=wH06pA8Gfn%2bnVs1DZuau1%2buUqWynivhzuPb3jsxt2gQ%3d&risl=&pid=ImgRaw&r=0);
+    background-position:center;
+    background-size:cover;
+    position:relative;
+}
+nav{
+    display:flex;
+    padding:3% 2%;
+    justify-content:space-between;
+    align-items:center;
+}
+nav .title{
+    font-family: 'Dancing Script', cursive;
+    width:30%;
+    font-size:20px;
+    font-weight:900;
+    color:white;
+    text-decoration:none;
+}
+a.title{
+    font-weight:600;
+    font-size:30px;
+}
+.fa.fa-bars{
+display:none;
+}
+a{
+    text-decoration: none;  
+}
+.nav-links
+{
+    flex:1;
+    text-align:right;
+}
+.nav-links ul li{
+    list-style:none;
+    display:inline-block;
+    padding:8px 12px;
+    position:relative;
+}
+.nav-links ul li a{
+    color:white;
+    text-decoration: none;
+}
+.nav-links ul li a::after{
+    content:'';
+    width:0%;
+    height:2px;
+    background:white;
+    display:block;
+    margin:auto;
+    transition: 0.5s;
+}
+.nav-links ul li a:hover::after{
+    width:100%;
+ }
+ /*----------------main page---------------------*/
+.header.main{
+    min-height:90vh;
+}
+nav.mainpage{
+    position:fixed;
+    top:0;
+    right:0;
+    width:100%;
+    background:black;
+    z-index:2;
+    padding:1.5% 2%;
+}
+.text-box{
+    width:80%;
+    color:white;
+    position:absolute;
+    top:40%;
+    left:1%;
+    text-align:center;
+    overflow:hidden;
+}
+.text-box h2{
+    font-size:42px;
+}
+.text-box p{
+    color:white;
+    margin:20px 0 40px;
+    font-weight:300;
+    line-height:22px;
+    padding:10px;
+}
+.column-1 p{
+    color:#777;
+    font-size:14px;
+    font-weight:300;
+    line-height:22px;
+    padding:10px;
+    overflow:hidden;
+}
+
+ /*------------------------about us-------------------*/
+ .wrapper{
+    margin: 4% 3% 4%;
+}
+.rower{
+    display:flex;
+    text-align:left;
+    justify-content: center;
+}
+.txt {
+    flex-basis:33%;
+    margin-right:13%;
+    line-height: 1.5em;
+    overflow:hidden;
+    padding-left:4%;
+}
+.heading h1{
+    font-size:45px;
+    font-family: 'Playfair Display', serif;
+   font-weight:600;
+   text-decoration:underline;
+   text-align:left;
+}
+.about-img .img-1 {
+    position: relative;
+}
+.img-responsive {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+.about-img .img-1 img{
+    width:500px;
+    height:350px;
+    border:10px solid white;
+    border-radius:3px;
+    box-shadow: 0px 5px 20px 0px black;
+}
+.about-img .img-1 .img-2 img,.about-img .img-1 .img-3 img{
+    width:300px;
+    height:200px;
+    border:10px solid white;
+    border-radius:3px;
+}
+.about-img .img-1 .img-2 {
+    position: absolute;
+    top: 50%;
+    left: -15%;
+    box-shadow: 0px 5px 20px 0px black;
+}
+.about-img .img-1 .img-3 {
+    position: absolute;
+    top: 84%;
+    left: 27%;
+    box-shadow: 0px 5px 20px 0px black;
+}
+@media (max-width: 700px){
+    .rower{
+        flex-direction:column;
+    }
+    .about-img .img-1 img {
+       width:98%;
+       margin-top:8%
+    }
+    .about-img .img-1 .img-2,.about-img .img-1 .img-3 {
+        display: none;
+    }
+    }
+
+
+/*-----------------------services---------------------------*/
+.small-container{
+    display:flex;
+    align-content:center;
+}
+.card{
+    flex-basis:31%;
+    background:#fff3f3;
+    border-radius:8px;
+    margin:5% 3.5%;
+    overflow:hidden;
+    transition: all 0.5s;
+    filter: drop-shadow(0px 5px 3px black);
+}
+.card:hover{
+    transform:scale(1.01,1.01);
+}
+.image img{
+    width:100%;
+    height:200px;
+}
+.card .title{
+    padding-top:25px;
+    text-align:center;
+}
+.des{
+    padding:10px;
+    text-align:center;
+    margin-bottom:20px;
+}
+.des p{
+    color:#777;
+}
+.card:hover{
+    box-shadow:0 0 20px 0px rgba(0,0,0,0.5);
+}
+
+/*--------------gallery-----------------*/
+.gallery{
+    display:flex;
+    flex-wrap:wrap;
+    flex-direction:row;
+    align-items:center;
+    justify-content:center;
+    margin:40px;
+}
+.single-img{
+   flex-basis:calc(32%);
+   padding:0 20px 20px;
+}
+.gallery img{
+    width:300px;
+    height:200px;
+    border-radius:3px;
+    filter: drop-shadow(0px 5px 3px black);
+    transition:0.5s;
+}
+.gallery img:hover{
+    transform:scale(1.1,1.1);
+}
+
+/*----------------Reservation,contact,login-----------------*/
+.info{
+    min-height:100vh;
+    width:100%;
+    background-image:linear-gradient(rgba(4, 30, 6, 0.7),rgba(4,9,30,0.7)),url(https://th.bing.com/th/id/R.69f2173d59729ea1cb31914a90cf8f9d?rik=7tlIVNUcRn9D8A&riu=http%3a%2f%2fww1.prweb.com%2fprfiles%2f2016%2f01%2f30%2f13226857%2fEsperanza_0001x.JPG&ehk=wH06pA8Gfn%2bnVs1DZuau1%2buUqWynivhzuPb3jsxt2gQ%3d&risl=&pid=ImgRaw&r=0);
+    background-position:center;
+    background-size:cover;
+    position:relative;
+}
+.top{
+     margin:1.5% 0.8%;
+     border-radius:5px;
+    background:white;
+}
+.top nav{
+    padding:1% 2%;
+}
+.nav-links.two ul li a{
+    color:black;
+}
+.nav-links.two ul li a::after{
+    background:black;
+}
+.container{
+    margin-top:8%;
+    margin-bottom:10%;
+   display:flex;
+   align-items:center;
+   justify-content:center;
+}
+form{
+       border:2px solid white;
+       border-radius:10%;
+       padding:15% 0;
+   }
+   .entry label{
+   color:white;
+   font-weight:700;
+}
+.entry{
+   margin:1.3em 1.4em;
+}
+.btn{
+     margin-left:30%;
+     padding-top:1.4em;
+     cursor:pointer;
+ }
+ .btn div{
+     display:inline;
+ }
+ button{
+   background-color:rgb(100, 96, 96);
+     border-radius:5px;
+     color:white;
+     padding:5px;
+ }
+/*----------------------footer---------------*/
+.row{
+    display:flex;
+    justify-content:space-around;
+    overflow:hidden;
+    flex-wrap: wrap;
+    margin:5% 4% 0;
+}
+.row h2{
+    text-align:center;
+    font-weight:600;
+    margin:10px 0;
+}
+.footer p{
+    color:#777;
+    font-size:14px;
+    font-weight:300;
+    line-height:22px;
+    padding:10px;
+    overflow:hidden;
+}
+.column-1{
+    flex-basis:31%;
+    background:#fff3f3;
+    border-radius:10px;
+    margin-bottom:6%;
+    padding:20px 12px;
+}
+.column-1:hover{
+    box-shadow:0 0 20px 0px rgba(0,0,0,0.2);
+}
+.column-1 a{
+    color:black;
+}
+.footer{
+    width:100%;
+    text-align:center;
+    padding:30px 0 5px;
+    background:black;
+}
+.footer h3{
+    color:white;
+    font-weight:600;
+}
+.icons .fa{
+    margin:0 13px;
+    cursor:pointer;
+    padding: 5px 18px;
+    color:white;
+}
+.row.two{
+    justify-content:center;
+    margin:10px;
+}
+.footer-col{
+    padding: 2% 5%;
+}
+.footer-col ul li{
+    list-style: none;
+    color:#777;
+    font-size:14px;
+}
+
+
+
+  @media(max-width:400px) {
+    a.title{
+        font-weight:600;
+        font-size:24px;
+    }
+    nav .title{
+        width:50%;
+    }
+    .text-box h2{
+        font-size:32px;
+    }
+    .nav-links ul li{
+        display:none;
+    }
+    .fa.fa-bars{
+        color:white;
+        display:contents;
+        cursor:pointer;
+        font-size:22px;
+    }
+    .top nav .fa.fa-bars{
+        color:black;
+    }
+    .small-container{
+        flex-direction:column;
+    }
+    .row{
+        flex-direction:column;
+    }
+}
+
+
+
+
+
+
